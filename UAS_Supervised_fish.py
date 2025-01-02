@@ -50,8 +50,6 @@ if st.sidebar.button('Prediksi Spesies'):
         model = model_random_forest
         with open('label_encoder_fish_forest.pkl', 'rb') as encoder_file:
             encoder = pickle.load(encoder_file)
-            with open('label_encoder_fruit_forest.pkl', 'rb') as encoder_file:
-                encoder = pickle.load(encoder_file)
  
     predicted_species_encoded = model.predict(features)[0]
     
